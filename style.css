@@ -17,7 +17,7 @@
 .card {
   /* display: flex;
   align-items: center; */
-  height: 500px;
+  height: 700px;
   width: 700px;
   margin-top: 14rem;
   /* margin-left: 23rem; */
@@ -62,9 +62,9 @@
   transform: scale(0.95);
 }
 
-/* .button_div {
+.button_div {
   margin-left: 175px;
-} */
+}
 
 span {
   font-weight: bold;
