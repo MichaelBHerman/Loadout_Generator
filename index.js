@@ -57,7 +57,7 @@ function generateLoadout() {
       getKrigAttatchments();
       break;
     case "STG44":
-      imageSrc = "./images/stg44.png";
+      imageSrc = "./images/stg44.jpg";
       clearAttatchments();
       getStgAttatchments();
       break;

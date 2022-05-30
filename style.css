@@ -10,6 +10,13 @@
   z-index: -1;
 }
 
+body {
+  font-family: "Press Start 2P", cursive;
+}
+h5 {
+  color: red;
+}
+
 #gun {
   height: 277px;
   width: 700x;
@@ -66,7 +73,7 @@
 }
 
 .button_div {
-  margin-left: 200px;
+  margin-left: 120px;
 }
 
 span {
