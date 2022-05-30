@@ -1,5 +1,13 @@
 function generateLoadout() {
-  let weaponsArray = ["XM4", "AK47", "KRIG6", "FARA83", "STG44"];
+  let weaponsArray = [
+    "XM4",
+    "AK47",
+    "KRIG6",
+    "FARA83",
+    "STG44",
+    "QBZ-83",
+    "FFAR",
+  ];
 
   let randomWeapon =
     weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
@@ -7,6 +15,30 @@ function generateLoadout() {
 
   const img2 = document.getElementById("primaryWeapon");
   img2.innerHTML = "Primary Weapon: " + randomWeapon;
+
+  const optic = document.getElementById("optic");
+
+  const muzzle = document.getElementById("muzzle");
+
+  const barrel = document.getElementById("barrel");
+
+  const underBarrel = document.getElementById("under_barrel");
+
+  const body = document.getElementById("body");
+
+  const stock = document.getElementById("stock");
+
+  const magazine = document.getElementById("magazine");
+
+  const handle = document.getElementById("handle");
+
+  const kits = document.getElementById("kits");
+
+  const proficiencys = document.getElementById("proficiencys");
+
+  const rearGrips = document.getElementById("rear_grips");
+
+  const ammoType = document.getElementById("ammo_type");
 
   switch (randomWeapon) {
     case "AK47":
@@ -33,6 +65,16 @@ function generateLoadout() {
       imageSrc = "./images/xm4.png";
       clearAttatchments();
       getXm4Attatchments();
+      break;
+    case "QBZ-83":
+      imageSrc = "./images/qbz.webp";
+      clearAttatchments();
+      getQbzAttatchments();
+      break;
+    case "FFAR":
+      imageSrc = "./images/ffar.jpg";
+      clearAttatchments();
+      getFfarAttatchments();
       break;
   }
 
@@ -745,7 +787,357 @@ function getFaraAttatchments() {
     }
   }
 }
+//-----------------------------------------------------qbz83-----------------------------------------------------
+let qbzOptics = [
+  "Millstop Reflex",
+  "Visiontech 2x",
+  "Kobra Red Dot",
+  "Quickdot LED",
+  "Axial Arms 3X",
+  "Sillix Holoscout",
+  "Microflex LED",
+  "Hawksmoor",
+  "Royal & Kross 4X",
+  "SUSAT Multizoom",
+  "Diamondback Reflex",
+  "AN/PVS-4 Thermal",
+];
+let qbzMuzzles = [
+  "Muzzle Brake 5.56",
+  "Flashguard 5.56",
+  "Suppressor",
+  "Infantry Compensator",
+  "SOCOM Elmininator",
+  "Agency Suppressor",
+];
+let qbzBarrels = [
+  "13.7 Ultralight",
+  "13.7 Cavalry Lancer",
+  "15.5 Reinforced Heavy",
+  "16.5 Ranger",
+  "15.5 Takedown",
+  "15.5 Task Force",
+];
+let qbzUnderbarrels = [
+  "Foregrip",
+  "Infiltrator Grip",
+  "Patrol Grip",
+  "Bruiser Grip",
+  "Field Agent Grip",
+  "SFOD Speedgrip",
+];
+let qbzBody = [
+  "Steady Aim Laser",
+  "Mounted Flashlight",
+  "SOF Target Designator",
+  "SWAT 5mw Laser Sight",
+  "Tiger Team Spotlight",
+  "Ember Sighting Point",
+];
+let qbzStocks = [
+  "Tactical Stock",
+  "Marathon Stock",
+  "Duster Pad",
+  "CQB Pad",
+  "SAS Combat Stock",
+  "Raider Stock",
+];
+let qbzMagazines = [
+  "40 Rnd Drum",
+  "Jungle-Style Mag",
+  "40 Rnd Speed Mag",
+  "STAGNAG 50 Rnd Drum",
+  "SAS Mag Clamp",
+  "Salvo 50 Rnd Fast Mag",
+];
+let qbzHandles = [
+  "Speed Tape",
+  "Dropshot Wrap",
+  "Field Tape",
+  "SASR Jungle Grip",
+  "Serpent Wrap",
+  "Airborne Elastic Wrap",
+];
 
+function getQbzOptic() {
+  let randomQbzOptic = qbzOptics[Math.floor(Math.random() * qbzOptics.length)];
+
+  const optic = document.getElementById("optic");
+  optic.innerHTML = randomQbzOptic;
+}
+
+function getQbzMuzzle() {
+  let randomQbzMuzzle =
+    qbzMuzzles[Math.floor(Math.random() * qbzMuzzles.length)];
+  const muzzle = document.getElementById("muzzle");
+  muzzle.innerHTML = randomQbzMuzzle;
+}
+
+function getQbzBarrel() {
+  let randomQbzBarrel =
+    qbzBarrels[Math.floor(Math.random() * qbzBarrels.length)];
+  const barrel = document.getElementById("barrel");
+  barrel.innerHTML = randomQbzBarrel;
+}
+
+function getQbzUnderBarrel() {
+  let randomQbzUnderBarrel =
+    qbzUnderbarrels[Math.floor(Math.random() * qbzUnderbarrels.length)];
+  const underBarrel = document.getElementById("under_barrel");
+  underBarrel.innerHTML = randomQbzUnderBarrel;
+}
+
+function getQbzBody() {
+  let randomQbzBody = qbzBody[Math.floor(Math.random() * qbzBody.length)];
+  const body = document.getElementById("body");
+  body.innerHTML = randomQbzBody;
+}
+
+function getQbzStock() {
+  let randomQbzStock = qbzStocks[Math.floor(Math.random() * qbzStocks.length)];
+  const stock = document.getElementById("stock");
+  stock.innerHTML = randomQbzStock;
+}
+
+function getQbzMagazine() {
+  let randomQbzMagazine =
+    qbzMagazines[Math.floor(Math.random() * qbzMagazines.length)];
+  const magazine = document.getElementById("magazine");
+  magazine.innerHTML = randomQbzMagazine;
+}
+
+function getQbzHandle() {
+  let randomQbzHandle =
+    qbzHandles[Math.floor(Math.random() * qbzHandles.length)];
+  const handle = document.getElementById("handle");
+  handle.innerHTML = randomQbzHandle;
+}
+function getQbzAttatchments() {
+  chosenAttachments = [];
+  let qbzAttatchments = [
+    getQbzOptic,
+    getQbzBarrel,
+    getQbzMuzzle,
+    getQbzUnderBarrel,
+    getQbzStock,
+    getQbzBody,
+    getQbzMagazine,
+    getQbzHandle,
+  ];
+  for (i = 0; chosenAttachments.length < 5; i++) {
+    let randomQbzAttatchments =
+      qbzAttatchments[Math.floor(Math.random() * qbzAttatchments.length)];
+    if (!chosenAttachments.includes(randomQbzAttatchments)) {
+      chosenAttachments.push(randomQbzAttatchments);
+    }
+  }
+  //switch case invokes the actual function in the chosenAttachments array
+  for (i = 0; i < chosenAttachments.length; i++) {
+    switch (chosenAttachments[i]) {
+      case getQbzOptic:
+        getQbzOptic();
+        break;
+      case getQbzMuzzle:
+        getQbzMuzzle();
+        break;
+      case getQbzBarrel:
+        getQbzBarrel();
+        break;
+      case getQbzUnderBarrel:
+        getQbzUnderBarrel();
+        break;
+      case getQbzBody:
+        getQbzBody();
+        break;
+      case getQbzStock:
+        getQbzStock();
+        break;
+      case getQbzMagazine:
+        getQbzMagazine();
+        break;
+      case getQbzHandle:
+        getQbzHandle();
+        break;
+    }
+  }
+}
+// -------------------------------------------------------FFAR-------------------------------------------------------
+let ffarOptics = [
+  "Millstop Reflex",
+  "Visiontech 2x",
+  "Kobra Red Dot",
+  "Quickdot LED",
+  "Axial Arms 3X",
+  "Sillix Holoscout",
+  "Microflex LED",
+  "Hawksmoor",
+  "Royal & Kross 4X",
+  "SUSAT Multizoom",
+  "Diamondback Reflex",
+  "AN/PVS-4 Thermal",
+];
+let ffarMuzzles = [
+  "Muzzle Brake 5.56",
+  "Flashguard 5.56",
+  "Suppressor",
+  "Infantry Compensator",
+  "SOCOM Elmininator",
+  "Agency Suppressor",
+];
+let ffarBarrels = [
+  "17.9 Ultralight",
+  "18.7 Cavalry Lancer",
+  "19.5 Reinforced Heavy",
+  "21.2 Ranger",
+  "20.3 Takedown",
+  "19.5 Task Force",
+];
+let ffarUnderbarrels = [
+  "Foregrip",
+  "Infiltrator Grip",
+  "Patrol Grip",
+  "Bruiser Grip",
+  "Field Agent Grip",
+  "SFOD Speedgrip",
+];
+let ffarBody = [
+  "Steady Aim Laser",
+  "Mounted Flashlight",
+  "SOF Target Designator",
+  "SWAT 5mw Laser Sight",
+  "Tiger Team Spotlight",
+  "Ember Sighting Point",
+];
+let ffarStocks = [
+  "Tactical Stock",
+  "Marathon Stock",
+  "Duster Pad",
+  "CQB Pad",
+  "SAS Combat Stock",
+  "Raider Stock",
+];
+let ffarMagazines = [
+  "38 Rnd Drum",
+  "Jungle-Style Mag",
+  "38 Rnd Speed Mag",
+  "STAGNAG 44 Rnd",
+  "SAS Mag Clamp",
+  "Salvo 44 Rnd Fast Mag",
+];
+let ffarHandles = [
+  "Speed Tape",
+  "Dropshot Wrap",
+  "Field Tape",
+  "SASR Jungle Grip",
+  "Serpent Wrap",
+  "Airborne Elastic Wrap",
+];
+
+function getFfarOptic() {
+  let randomFfarOptic =
+    ffarOptics[Math.floor(Math.random() * ffarOptics.length)];
+
+  const optic = document.getElementById("optic");
+  optic.innerHTML = randomFfarOptic;
+}
+
+function getFfarMuzzle() {
+  let randomFfarMuzzle =
+    ffarMuzzles[Math.floor(Math.random() * ffarMuzzles.length)];
+  const muzzle = document.getElementById("muzzle");
+  muzzle.innerHTML = randomFfarMuzzle;
+}
+
+function getFfarBarrel() {
+  let randomFfarBarrel =
+    ffarBarrels[Math.floor(Math.random() * ffarBarrels.length)];
+  const barrel = document.getElementById("barrel");
+  barrel.innerHTML = randomFfarBarrel;
+}
+
+function getFfarUnderBarrel() {
+  let randomFfarUnderBarrel =
+    ffarUnderbarrels[Math.floor(Math.random() * ffarUnderbarrels.length)];
+  const underBarrel = document.getElementById("under_barrel");
+  underBarrel.innerHTML = randomFfarUnderBarrel;
+}
+
+function getFfarBody() {
+  let randomFfarBody = ffarBody[Math.floor(Math.random() * ffarBody.length)];
+  const body = document.getElementById("body");
+  body.innerHTML = randomFfarBody;
+}
+
+function getFfarStock() {
+  let randomFfarStock =
+    ffarStocks[Math.floor(Math.random() * ffarStocks.length)];
+  const stock = document.getElementById("stock");
+  stock.innerHTML = randomFfarStock;
+}
+
+function getFfarMagazine() {
+  let randomFfarMagazine =
+    ffarMagazines[Math.floor(Math.random() * ffarMagazines.length)];
+  const magazine = document.getElementById("magazine");
+  magazine.innerHTML = randomFfarMagazine;
+}
+
+function getFfarHandle() {
+  let randomFfarHandle =
+    ffarHandles[Math.floor(Math.random() * ffarHandles.length)];
+  const handle = document.getElementById("handle");
+  handle.innerHTML = randomFfarHandle;
+}
+
+function getFfarAttatchments() {
+  chosenAttachments = [];
+  let ffarAttatchments = [
+    getFfarOptic,
+    getFfarBarrel,
+    getFfarMuzzle,
+    getFfarUnderBarrel,
+    getFfarStock,
+    getFfarBody,
+    getFfarMagazine,
+    getFfarHandle,
+  ];
+  for (i = 0; chosenAttachments.length < 5; i++) {
+    let randomFfarAttatchments =
+      ffarAttatchments[Math.floor(Math.random() * ffarAttatchments.length)];
+    if (!chosenAttachments.includes(randomFfarAttatchments)) {
+      chosenAttachments.push(randomFfarAttatchments);
+    }
+  }
+  //switch case invokes the actual function in the chosenAttachments array
+  for (i = 0; i < chosenAttachments.length; i++) {
+    switch (chosenAttachments[i]) {
+      case getFfarOptic:
+        getFfarOptic();
+        break;
+      case getFfarMuzzle:
+        getFfarMuzzle();
+        break;
+      case getFfarBarrel:
+        getFfarBarrel();
+        break;
+      case getFfarUnderBarrel:
+        getFfarUnderBarrel();
+        break;
+      case getFfarBody:
+        getFfarBody();
+        break;
+      case getFfarStock:
+        getFfarStock();
+        break;
+      case getFfarMagazine:
+        getFfarMagazine();
+        break;
+      case getFfarHandle:
+        getFfarHandle();
+        break;
+    }
+  }
+}
 // ----------------------------------------------------stg44------------------------------------------------------
 let stgMuzzles = [
   "Scythe Compensator",
@@ -931,40 +1323,19 @@ function getStgAttatchments() {
 
 // Clears previous chosenAttachments on innerHTML
 function clearAttatchments() {
-  chosenAttachments = [];
-  const optic = document.getElementById("optic");
-  optic.innerHTML = "";
-
-  const muzzle = document.getElementById("muzzle");
-  muzzle.innerHTML = "";
-
-  const barrel = document.getElementById("barrel");
-  barrel.innerHTML = "";
-
-  const underBarrel = document.getElementById("under_barrel");
-  underBarrel.innerHTML = "";
-
-  const body = document.getElementById("body");
-  body.innerHTML = "";
-
-  const stock = document.getElementById("stock");
-  stock.innerHTML = "";
-
-  const magazine = document.getElementById("magazine");
-  magazine.innerHTML = "";
-
-  const handle = document.getElementById("handle");
-  handle.innerHTML = "";
-
-  const kits = document.getElementById("kits");
-  kits.innerHTML = "";
-
-  const proficiencys = document.getElementById("proficiencys");
-  proficiencys.innerHTML = "";
-
-  const rearGrips = document.getElementById("rear_grips");
-  rearGrips.innerHTML = "";
-
-  const ammoType = document.getElementById("ammo_type");
-  ammoType.innerHTML = "";
+  allAttachments = [
+    optic,
+    muzzle,
+    barrel,
+    under_barrel,
+    body,
+    stock,
+    magazine,
+    handle,
+    kits,
+    proficiencys,
+    rear_grips,
+    ammo_type,
+  ];
+  allAttachments.forEach((element) => (element.innerHTML = ""));
 }
