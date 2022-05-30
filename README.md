@@ -1,3 +1,3 @@
 # Loadout_Generator
 A random loadout generator I created for Call of Duty Warzone.
-![loadout_screenshot](https://user-images.githubusercontent.com/89651714/170077223-33cacaf4-ddc7-4a93-b363-e6272f69f37b.PNG)
+![image](https://user-images.githubusercontent.com/89651714/171046651-636c2ee4-5f40-43f4-bbb1-9e628758da8d.png)
